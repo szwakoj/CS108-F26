@@ -1210,7 +1210,7 @@
 
 <h1 id="c-compilation-objects">C Compilation Objects</h1>
 <p>To go from human-readable C code to a running program on a computer requires a few steps of processing before being converted to the <strong>machine code</strong> that ultimately is what the computer runs on the CPU. </p>
-<p>This lab will use a few <code>gcc</code> command flags to extract our those intermediate forms of the program we made. To reiterate the compilation process in the <a href="../lessons/2_reviewing_c.md">C review lesson</a>, there are four main steps in C compilation:</p>
+<p>This lab will use a few <code>gcc</code> command flags to extract our those intermediate forms of the program we made. There are four main steps in C compilation:</p>
 <ol>
 <li><strong>Preprocessing</strong>: The C preprocessor (CPP) formats the source code using macros like <code>#include</code> or <code>#define</code>, including needed headers and applying any user-defined changes before passing to the next step</li>
 <li><strong>Compilation</strong>: The compiler translates C source code into assembly language</li>
@@ -1220,8 +1220,6 @@
 <p>Each one of these steps produces distinct products that we can look closer at to understand the process a bit more. In order to do that, we will need another tool to be added to our system PATHs. <code>xxd</code> is a command-line tool that exposes the raw binary and hexadecimal values of files for us. It can be downloaded <a href="https://sourceforge.net/projects/xxd-for-windows/">here</a> for Windows. in order for it to be visible to your PATH easily, copy the <code>xxd.exe</code> inside of the zip file and place it inside of the <code>C:mingw64/bin/</code> folder. For Linux and Mac, it is probably already installed in the terminal, if not:
 - For Linux: Use your package manager to install <code>xxd</code>
 - For Mac: Use Brew to install <code>xxd</code> similar to <a href="../../homework/gcc_install/">here</a></p>
-<p>Another level of this lab is the descent down into the abstraction hierarchy from a relatively high-level language to assembly and finally to machine code:</p>
-<p><img alt="Layers of abstraction diagram. From top to bottom, &quot;Application&quot;, &quot;Algorithm&quot;, &quot;Programming Language&quot;, &quot;Assembly Language&quot;, &quot;Machine Code&quot;, &quot;Instruction Set Architecture&quot;, &quot;Micro Architecture&quot;, &quot;Logic Gates, Registers&quot;, &quot;IC's and Transistors&quot;, and, &quot;Electronics and Physics&quot;. On the left are two scales of magnitude. The first is Complexity, indicating that the &quot;Application&quot; layer is the least complex and the &quot;Electronics and Physics&quot; layer as most complex, with everything in between rated by their organization. The second scale is &quot;Abstraction&quot;, indicating that the &quot;Application&quot; layer is the most abstract and the &quot;Electronics and Physics&quot; layer as least abstract, with everything in between rated by their organization. There is a division on the right separating Software and Hardware, centered at &quot;Instruction Set Architecture&quot;, signifying that everything above is &quot;Software&quot; and everything below as &quot;Hardware&quot;." src="../img/Layers-Of-Abstraction.jpg" /></p>
 <h2 id="1-setting-up">1. Setting up</h2>
 <h4 id="creating-test-subjects">Creating Test Subjects</h4>
 <ul>
