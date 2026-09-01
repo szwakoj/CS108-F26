@@ -12,7 +12,7 @@ On-Campus, 4 Credits
 **Room**: Kunsela Hall C108
 <br>
 
-**Meeting Times:** Mondays and Wednesdays, 10:00pm - 11:50pm
+**Meeting Times:** Mondays and Wednesdays, 10:00am - 11:50am
 
 
 ## Office Hours and Contact Info
