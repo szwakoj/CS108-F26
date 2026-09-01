@@ -1,9 +1,9 @@
-site_name: CS 220 - Computer Organization
+site_name: CS 108 - Computing Fundamentals
 
 theme:
   name: material
-  logo: img/cs220.png
-  favicon: img/cs220.png
+  logo: img/cs108.png
+  favicon: img/cs108.png
   #custom_dir: overrides
   palette:
     # Palette toggle for light mode
@@ -54,9 +54,7 @@ nav:
   - Schedule: schedule.md
   - Glossary: glossary.md
   - Lessons:
-    - Introduction: lessons/1_introduction.md
-    - Reviewing C: lessons/2_reviewing_c.md
-    - Binary and Hex: lessons/3_binary_hex.md
+    - Introduction: lessons/
   - Labs:
     - C Compilation: labs/c_compilation.md
   - Homework:

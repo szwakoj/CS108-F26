@@ -1,6 +1,6 @@
-# CS220 - Computer Organization
+# CS108 - Computing Fundamentals 
 
-Welcome to CS 220, Spring 2026!
+Welcome to CS 108, Fall 2026!
 
 This site serves as the main entry point for the course and will be the means of distributing course material. All information on here will be translated to Brightspace for grades, due dates, and handing in assignments.
 
@@ -15,6 +15,6 @@ This site serves as the main entry point for the course and will be the means of
  
 **Note on Accessibility**
 
-This course website was adopted and hand tailored to be in-line with new WCAG accessibility guidelines. If there are any issues accessing its material or if there are features not working properly, please reach me at szwakoj@sunypoly.edu with the subject line "CS 220 Site Issue".
+This course website was adopted and hand tailored to be in-line with new WCAG accessibility guidelines. If there are any issues accessing its material or if there are features not working properly, please reach me at szwakoj@sunypoly.edu with the subject line "CS 108 Site Issue".
 
 In addition to offering all course material in this format, the source plain text, markdown files are available at this course's github to be viewed through your markdown viewer of choice. 
