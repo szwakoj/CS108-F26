@@ -2,7 +2,7 @@
 ## Course: Computer Organization (CS 220)
 **Section:** 02
 
-**CRN:** 2040
+**CRN:** 1031
 
 
 **Semester**: Spring 2026
@@ -18,12 +18,13 @@ On-Campus, 4 Credits
 ## Office Hours and Contact Info
 **Instructor:** John Szwakob III (Mr. S)
 
-**Office Location:** Kunsela Hall C127
+**Office Location:** Kunsela Hall C108
 
 **Office Hours:**
-- Mondays 2:00pm - 4:00pm
 
-- Tuesdays and Thursdays, 10:00am - 12:00pm
+- Mondays 10:00am - 12:00pm
+
+- Mondays and Wednesdays, 2:00pm - 4:00pm
 
 - Friday by appointment
 
