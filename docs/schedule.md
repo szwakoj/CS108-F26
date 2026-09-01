@@ -6,5 +6,4 @@ This schedule will be primarily used as a history of topics that we have covered
 |                  | Basics of Computers                                          |                                   |                                           |          |
 | 8/31/26 (Week 1) | - Syllabus<br>- Introduction<br>- Installation <br>- History |                                   | [Installation](./homework/gcc_install.md) |          |
 | 9/07/26 (Week 2) | - Basics of C<br>- Compilation<br>- Input/Output             |                                   | [Compilation](labs/c_compilation.md)      |          |
-| 9/14/26 (Week 3) |                                                              | [Binary](lessons/3_binary_hex.md) |                                           |          |
 

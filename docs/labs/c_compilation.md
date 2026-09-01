@@ -2,7 +2,7 @@
 
 To go from human-readable C code to a running program on a computer requires a few steps of processing before being converted to the **machine code** that ultimately is what the computer runs on the CPU. 
 
-This lab will use a few `gcc` command flags to extract our those intermediate forms of the program we made. To reiterate the compilation process in the [C review lesson](../lessons/2_reviewing_c.md), there are four main steps in C compilation:
+This lab will use a few `gcc` command flags to extract our those intermediate forms of the program we made. There are four main steps in C compilation:
 
 1. **Preprocessing**: The C preprocessor (CPP) formats the source code using macros like `#include` or `#define`, including needed headers and applying any user-defined changes before passing to the next step
 2. **Compilation**: The compiler translates C source code into assembly language
@@ -12,10 +12,6 @@ This lab will use a few `gcc` command flags to extract our those intermediate fo
 Each one of these steps produces distinct products that we can look closer at to understand the process a bit more. In order to do that, we will need another tool to be added to our system PATHs. `xxd` is a command-line tool that exposes the raw binary and hexadecimal values of files for us. It can be downloaded [here](https://sourceforge.net/projects/xxd-for-windows/) for Windows. in order for it to be visible to your PATH easily, copy the `xxd.exe` inside of the zip file and place it inside of the `C:mingw64/bin/` folder. For Linux and Mac, it is probably already installed in the terminal, if not:
 - For Linux: Use your package manager to install `xxd`
 - For Mac: Use Brew to install `xxd` similar to [here](../homework/gcc_install.md)
-
-Another level of this lab is the descent down into the abstraction hierarchy from a relatively high-level language to assembly and finally to machine code:
-
-![Layers of abstraction diagram. From top to bottom, "Application", "Algorithm", "Programming Language", "Assembly Language", "Machine Code", "Instruction Set Architecture", "Micro Architecture", "Logic Gates, Registers", "IC's and Transistors", and, "Electronics and Physics". On the left are two scales of magnitude. The first is Complexity, indicating that the "Application" layer is the least complex and the "Electronics and Physics" layer as most complex, with everything in between rated by their organization. The second scale is "Abstraction", indicating that the "Application" layer is the most abstract and the "Electronics and Physics" layer as least abstract, with everything in between rated by their organization. There is a division on the right separating Software and Hardware, centered at "Instruction Set Architecture", signifying that everything above is "Software" and everything below as "Hardware".](../img/Layers-Of-Abstraction.jpg)
 
 ## 1. Setting up
 
