@@ -1,18 +1,18 @@
 
-## Course: Computer Organization (CS 220)
-**Section:** 02
+## Course: Computing Fundamentals  (CS 108)
+**Section:** 01
 
-**CRN:** 1031
+**CRN:** 1084
 
 
-**Semester**: Spring 2026
+**Semester**: Fall 2026
 
 On-Campus, 4 Credits
 
-**Room**: Kunsela Hall C108
+**Room**: Kunsela Hall A129
 <br>
 
-**Meeting Times:** Mondays and Wednesdays, 10:00am - 11:50am
+**Meeting Times:** Tuesdays and Thursdays, 2:00pm - 3:50pm
 
 
 ## Office Hours and Contact Info
@@ -36,87 +36,77 @@ Email: szwakoj@sunypoly.edu
 
  
 ## Course Catalog Description:
-Introduces students to the organization and architecture of computer systems as a hierarchy of levels, beginning with the standard von Neumann model and then moving forward to more recent architectural concepts. Topics include digital logic, microprogramming, conventional machine and assembly language levels. Emphasis is given to those aspects of computer hardware that effect programming. Prerequisite: CS 108
+Fundamental concepts of computing and programming. Topics include data types, control structures, functions, arrays, files, and the mechanics of running, testing, and debugging. The course also offers an introduction to the historical and social context of computing and an overview of computer science as a discipline. Course taught using the C programming language.
 ## Course Objectives:
-- Give a high-level overview of the organization and architecture of computer systems
-- Introduce students to the concept of abstraction in both problem solving and computer systems
-- Cover the von Neuman Architecture
-- Teach students the binary number system, boolean logic, and digital logic
-- Have students program in Assembly and other low-level machine languages
-- Show the intersection of computer hardware and software
+- Develop an understanding of how a computer works and the fundamentals of computation
+- An ability to think programmatically like a computer 
+- The skills to read, understand, and produce C code
+- Cover language features that are ubiquitous across other programming languages
+- Understand compilation and how code is ran on a computer
 
 ## Student Learning Outcomes
 By the end of this course you will:
 
- - Understand the concept of abstraction
- - Be able to explain the Hierarchy of Abstraction in computers and understand which level you are working in
- - Know the general organizational and architectural concepts of computer systems at multiple levels
- - Convert numbers between binary, decimal, and hexadecimal number systems
- - Use basic boolean algebra and k-maps to understand digital logic
- - Design basic circuits using logic gates
- - Understand how transistors are used to built up to more complex systems
- - Create your own Fetch-Decode-Execute systems
- - Simulate/Emulate simple CPU processes using bit manipulation in the C programming language
- - Code in Assembly and other low-level instruction sets
+- Understand the fundamentals of what a computer is and what it does 
+- Understand an overview of the different levels of abstraction within a computer system 
+- Demonstrate abstract thinking and computational problem solving skills by designing, developing, testing, and analyzing source code 
+- Use the C programming language and select libraries
+- Understand boolean expressions, conditionals, loops, functions, data types, and structs within the C language as well as generally  
+- Manipulate the primitive data types and generate composite data types within the C language 
+- Understand professional, ethical, legal, security and social issues and responsibilities of programmers in today’s world
 
 ## Text and Materials:
 
-There is no required text book, most if not all material will be through this site and in class lectures. There are, however suggested resources for those who learn best with a textbook as reference, as well as the sources for the course.
+There is NOT a required textbook for this course. There is a recommended textbook that is offered by the bookstore for those who learn best with a textbook in their hands. The book is: 
 
+K. N. King, C Programming: A Modern Approach, any Edition,
+ISBN-10: 0-393-97950-4 ISBN-13: 978-0-393-97950-3
 
-"Digital Design and Computer Architecture" by Harris and Harris 
+I encourage you to find your own resources that will help you learn best, whether it is through Youtube or a different book. The slides posted to Brightspace will contain the relevant information, along with additional resources for you to peruse through at your own need. Some of the resources I recommend as references or for additional help: 
 
-- Textbook that covers a lot of the early information of this course, we will not be covering it exhaustively
-
-- Not required
+- https://www.w3schools.com/c/index.php 
+	- This is a great resource for the basics of the C language to use as a reference and as study material. It will not go in depth like we will in class, however it is handy for when you need a refresher on a single feature of C 
+- https://www.freecodecamp.org/news/tag/c-programming/ 
+	- Another good online resource for the C language. There are select topics gone over in the form of articles. Good for if there is a single thing that you need a little more explanation on These resources may go ahead of where we are as a class, so use them in conjunction with the slides posted each week and only use them to fill in blanks or get additional practice. These are not lesson plans so they won’t follow along with us in class. If using them makes you more confused, then you are probably going ahead.
 
 ## Course Schedule:
 
 Below is the rough topical structure of the course in the order of coverage, you can find this plan and the most updated schedule at the course website. The schedule is a rough outline and will be changed to best serve the classes needs, any changes made will be in favor of the students and any complications can be rectified over email or in-person.
 
-
 These units are a rough organization of the topics in the order covered, they will be about 2-3 weeks each with some time allotted for tests and review. More or less time could be taken depending on the class pace, the latter allowing for more topics to be covered.
 
-- Unit Order
-	- Computers and Binary
-	- Digital Logic
-	- Circuits
-	- Basic Computer Organization
-	- Von Neumann Arcitecture
-	- Assembly and Machine Languages
-
+- Basics of Computers
+- The C Programming Language
+- Input/Output
+- Data Types
+- Comparisons and Loops
+- Functions
+- Arrays
+- Strings
+- Pointers
+- File I/O
 
 ## Method of Evaluation
 
 - **Homeworks** 
 	- Take home assignments meant to instill concepts covered in class
 	- Will often be based on labs or other in-class activities
-	- Mostly coding, short answer, and some drawing
-- **Attendance Quizzes**
-	- Short (2-3 Questions) in-person quizzes given weekly
-	- Meant to test topics covered the class previous
-	- Can be given on any class day during the week
-	- No re-tests
-	- Three lowest grades dropped from average
-- **Unit Tests**
-	- Longer form (10 - 15 Questions) in-person tests given at the end of each unit
-	- Given about every three weeks, announced beforehand
-	- Will contain short and long answer questions
-	- Based on lesson, homeworks, labs, and attendance quizzes
-	- Retests given sparingly and under adequate circumstances
-	- Lowest grade dropped from average
+	- Almost all will be coding related
+- **Quizzes**
+	- Medium length in-person quizzes given throughout the semester to test concepts covered before
+	- 10-15 questions
+	- True/false, multiple choice, short response, and written coding problems
 - **Labs**
 	- Ungraded guided exercises that are covered in class 
 	- Students will start them in class and finish them on their own
-	- Will prepare students for both homeworks and tests
+	- Will prepare students for both homeworks and quizzes
 
-| Academic Work              | % of Grade |
-| -------------------------- | ---------- |
-| Homework                   | 60%        |
-| Attendance Quizzes(Weekly) | 10%        |
-| Unit Tests                 | 30%        |
-| Labs(in-class)             | Ungraded   |
-| Total                      | 100%       |
+| Academic Work  | % of Grade |
+| -------------- | ---------- |
+| Homework       | 60%        |
+| Quizzes        | 40%        |
+| Labs(in-class) | Ungraded   |
+| Total          | 100%       |
 
 ### Letter Grading
 
@@ -198,7 +188,7 @@ Each assignment will be given with an intended due date attached. For each day l
 
 ## Policy on Missed Classes, Make-up Work, and/or Extra Credit:
 
-There is no method of attendance other than the attendance quizzes given weekly
+There is no method of attendance other than the attendance quizzes given weekly.
 
 ## Cancellation of Classes Due to Inclement Weather or Other Emergency:
 
