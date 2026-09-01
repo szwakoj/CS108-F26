@@ -78,11 +78,13 @@ Below is the rough topical structure of the course in the order of coverage, you
 These units are a rough organization of the topics in the order covered, they will be about 2-3 weeks each with some time allotted for tests and review. More or less time could be taken depending on the class pace, the latter allowing for more topics to be covered.
 
 - Unit Order
-	- Introduction
+	- Computers and Binary
+	- Digital Logic
+	- Circuits
 	- Basic Computer Organization
-	- Binary and Digital Logic
-	- Circuits, Multiplexers, and Decoders
-	- Instruction Set Architectures and Assembly
+	- Von Neumann Arcitecture
+	- Assembly and Machine Languages
+
 
 ## Method of Evaluation
 
