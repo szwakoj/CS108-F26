@@ -9,16 +9,16 @@
 
 On-Campus, 4 Credits
 
-**Room**: Kunsela Hall A135
+**Room**: Kunsela Hall C108
 <br>
 
-**Meeting Times:** Mondays and Wednesdays, 12:00pm - 1:50pm
+**Meeting Times:** Mondays and Wednesdays, 10:00pm - 11:50pm
 
 
 ## Office Hours and Contact Info
 **Instructor:** John Szwakob III (Mr. S)
 
-**Office Location:** Kunsela Hall C108
+**Office Location:** Kunsela Hall C127
 
 **Office Hours:**
 
