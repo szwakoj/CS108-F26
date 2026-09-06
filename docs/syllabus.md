@@ -179,7 +179,7 @@ The Writing and Communications Center (WCC) is here to support all of SUNY Polyâ
 
 All homeworks, quizzes, tests, and labs are meant to be completed by students independently (unless otherwise stated) and without the assistance of generative AI backed by LLMs including, but not limited to, ChatGPT, Claude, Gemini, and all other text/code generators. All material that is assigned to students is meant to instill lasting critical thinking and problem solving skills that are required to excel in both this course and wherever students may end up in the future. As such, usage of these tools in a fashion akin to plagiarism (not citing, wholesale copying, intent to hide sources) is strictly prohibited in this course. All incidents that can be proven must be brought to the dean and always results in a zero on the grade. This goes for plagiarizing code from other sources, such as StackOverflow, Reddit, Github, other uncited sources, and fellow students.
 
-That being said, using other sources as reference is not completely out of the question. Peers, tutorials, YouTube videos, existing code, and even LLMs can greatly aid in understanding complex topics. However, they cannot be used without disclosure and proper citation if being used extensively in an assignment. Use other sources and LLMs cautiously as this course is based on the lessons found within the the lectures given in-person.
+That being said, using other sources as reference is not completely out of the question. Peers, tutorials, YouTube videos, existing code, and even LLMs can greatly aid in understanding complex topics. However, they cannot be used without disclosure and proper citation if being used extensively in an assignment. Use other sources and LLMs cautiously as this course is based on the lessons found within the lectures given in-person.
 
 ## Policy on Submission of Assignments
 
@@ -188,7 +188,14 @@ Each assignment will be given with an intended due date attached. For each day l
 
 ## Policy on Missed Classes, Make-up Work, and/or Extra Credit:
 
-There is no method of attendance other than the attendance quizzes given weekly.
+Attendance is not tracked, if you miss a class all of the weekâ€™s material will be within the Brightspace. While attendance is not tracked, students that attend their classes will do significantly better due to seeing the demonstrations in class, along with the ability to ask questions to the professor. 
+
+There will be two excused quizzes available to each student. If you do not attend on a quiz day you will be able to use these excused quizzes to remove the otherwise zero grade from your quiz average. If by the end of the semester you have not used your excused quizzes they will be used to remove the two lowest quiz grades from your overall grade.
+
+See previous policy on the submission of assignments for how missed assignments are handled.
+
+Extra credit may be given during the semester. They will be in the form of additional assignments aimed at testing your skills of problem solving. Any extra credit offered and then completed will be added to the grade book as additional assignment grades.
+
 
 ## Cancellation of Classes Due to Inclement Weather or Other Emergency:
 
