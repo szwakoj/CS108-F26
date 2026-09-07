@@ -1,0 +1,1700 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../glossary/">
+      
+      
+        <link rel="next" href="../../labs/c_compilation/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/cs108.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Introduction - CS 108 - Computing Fundamentals</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-the-c-programming-language" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CS 108 - Computing Fundamentals" class="md-header__button md-logo" aria-label="CS 108 - Computing Fundamentals" data-md-component="logo">
+      
+  <img src="../../img/cs108.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CS 108 - Computing Fundamentals
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../syllabus/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Syllabus
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../schedule/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../glossary/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Glossary
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Lessons
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../labs/c_compilation/" class="md-tabs__link">
+          
+  
+  
+  Labs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../homework/how_to_hand_in/" class="md-tabs__link">
+          
+  
+  
+  Homework
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CS 108 - Computing Fundamentals" class="md-nav__button md-logo" aria-label="CS 108 - Computing Fundamentals" data-md-component="logo">
+      
+  <img src="../../img/cs108.png" alt="logo">
+
+    </a>
+    CS 108 - Computing Fundamentals
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedule/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lessons
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Lessons
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-c-programming-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The C Programming Language
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-compile-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Write -&gt; Compile -&gt; Run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomy-of-a-c-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomy of a C Program
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types-and-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Types and Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-inputoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Input/Output
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Input/Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-format-specifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Format Specifiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Labs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Labs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../labs/c_compilation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C Compilation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Homework
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../homework/how_to_hand_in/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How To Hand In
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../homework/gcc_install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../homework/0_hello/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homework 0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-c-programming-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The C Programming Language
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#write-compile-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Write -&gt; Compile -&gt; Run
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomy-of-a-c-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anatomy of a C Program
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-types-and-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Types and Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operators
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-inputoutput" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Input/Output
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Input/Output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#basic-format-specifiers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Format Specifiers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inputs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Lessons
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduction-to-the-c-programming-language">Introduction to The C Programming Language</h1>
+<p>C Programming may seem overly difficult or hard to read when compared to a more modern language like Python, but that superficial barrier of entry, once overcome, reveals a language that gives you a lot of power. Power in processing speed, control, and efficiency. Because there are a lot of features to go over and the early steps are small, there are going to be things that go unexplained. When this happens, don't panic, it will be gone over in due time, or use it as an opportunity to search for the answer. Learning C is a moderately difficult but rewarding experience and one that gives you a language that is at the core of spaceships, banking infrastructure, robots, and just about every other computer on the planet. </p>
+<h2 id="the-c-programming-language">The C Programming Language</h2>
+<p>The C programming language was developed in 1972 at <a href="https://en.wikipedia.org/wiki/Bell_Labs">Bell Labs</a> by Dennis Ritchie. It was originally developed as a successor to the B programming language (there was no A...boring). Since its inception, it has become one of the most used languages today. In fact, most computers, regardless of use, shape, or manufacturer, use C at some layer. This is why it is the go-to language to learn for both developers and hackers. It's like a common language shared between all modern computers. </p>
+<p>C is an imperative procedural language with static typed variables. What that means:</p>
+<ul>
+<li><strong>Imperative procedural</strong> - Basically everything that the language can do is broken down into discrete commands that alter a program's overall state</li>
+<li><strong>Statically typed</strong> - means that variables can only be one type, decided at its creation <ul>
+<li>So if a variable is an integer, it will always be an integer</li>
+</ul>
+</li>
+</ul>
+<p>Remember the slides from Software Basics and the levels of abstraction, software runs at different levels of abstraction, the lowest form being the Instruction Set. C is a High/Middle Level Language, although compared to modern languages it is sometimes referred to a low-level language(not necessarily correct but you might see it). Its status is above the Assembly Language and below scripting/interpreted languages like Python and Java. C falls between them because it is a compiled language, meaning that the actual program we write will be translated down into machine code that the computer can recognize. Python code is ran through an interpreter where each line triggers a pre-compiled piece of code at runtime. Because Python is reliant on pre-written "pieces of code" that are hard for most programmers to access, C offers more control over what the computer is doing, making C code oftentimes very fast compared to Python. </p>
+<p><img alt="Title: The Modern Tower of Abstraction. It is a pyramid of colored rectangles showing the relationship between different pieces of software and programming languages. The labels starting from the top are, &quot;&quot;Add a login button&quot; -&gt; AI&quot;, &quot;React/Next.js/Rails&quot;, &quot;Python/JavaScript/Ruby&quot;, &quot;C/C++/Rust&quot;, &quot;Assembly Language&quot;, &quot;Machine Code (1s and 0s)&quot;, and lastly &quot; Math, Logic, Physics&quot; " src="../../img/abstraction.png" /></p>
+<h2 id="write-compile-run">Write -&gt; Compile -&gt; Run</h2>
+<p>As discussed in the last section, C is a compiled language, meaning we write the code first, then need to compile it down into binary machine code in order for the computer to run it. We do this because computers only understand very specific commands/functions that make the transistors do what we want. Transistors can only be on or off, a 1 or a 0, meaning that is the language they ultimately understand. Binary is a number system that uses 1's and 0's to convey information, and eventually all programs are converted to it in order to run on the CPU. But since we can't really understand binary we need to code in a way that we can understand and then compile down into a form the computer can understand.</p>
+<p>Steps to make a C file, compile it, and then run it, via console commands:</p>
+<ol>
+<li>Open Sublime Text</li>
+<li>Make a new file</li>
+<li>Make the basic start of a C program, there is an example below</li>
+<li>Change it to be the program you want</li>
+<li>Save it as filename.c, naming it what you want (hopefully descriptive of its purpose)</li>
+<li>Save the file in a location you remember</li>
+<li>Open your cmd (for Windows) or Terminal (for Mac) or Shell (for Linux)</li>
+<li>Use the command <code>cd Folder</code> to navigate to the location from step 6</li>
+<li>With the C file in the same folder as the console, type <code>gcc filename.c</code><ul>
+<li>This will create an executable file called a.exe or a.out (depending on your system)</li>
+<li>If you want to name your executable use <code>gcc filename.c -o outputname.exe</code><ul>
+<li>take out the .exe if you are not using Windows</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Run the created file by typing <code>a.exe</code> (for Windows) or <code>./a.out</code> (for Mac or Linux)</li>
+</ol>
+<p>When we do <code>gcc hello_world.c -o a.exe</code> (for Mac/Linux <code>gcc hello_world.c -o a.out</code>), we are using the GNU Compiler Collection (GCC) to take our C file and convert it into machine code that the computer can understand. We will look at a C program that outputs "Hello World" to the console. This file is a text file that is stating what I, as a programmer, want the computer to do in the C language. The compiler will take it and turn it into a file called [[a.out|a.out]]. This <code>a.out</code> file is in a format that the computer's CPU can understand. Unfortunately, because it is in a raw format, there's no real way to display it in a way that we would understand. I took the liberty to dump out the binary, hexadecimal, and assembly representation to see what the computer is actually seeing. </p>
+<p>Here is how they are organized with links:</p>
+<ul>
+<li>Code<ul>
+<li><a href="../../code/dump_stuff/hello_world.c">hello_world.c</a><ul>
+<li>The C program</li>
+</ul>
+</li>
+<li><a href="../../code/dump_stuff/a.txt">a.exe</a><ul>
+<li>The raw executable for my Windows machine (most look like this but have minor variations)</li>
+</ul>
+</li>
+<li>Data<ul>
+<li>assembly<ul>
+<li><a href="../../code/dump_stuff/hello_world.txt">hello_world.s</a><ul>
+<li>The assembly code that my code got turned into before fully being compiled into machine code</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>bin_dumps<ul>
+<li><a href="../../code/dump_stuff/hello_dump_b.txt">hello_dump_b.txt</a><ul>
+<li>The binary representation of the C file containing the human-readable code</li>
+</ul>
+</li>
+<li><a href="../../code/dump_stuff/a_dump_b.txt">a_dump_b.txt</a><ul>
+<li>The binary representation of the executable, parts of this are the actual binary that is being sent to the CPU at the transistor level</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>hex_dumps<ul>
+<li><a href="../../code/dump_stuff/hello_dump_h.txt">hello_dump_h.txt</a><ul>
+<li>The hexadecimal representation of the C file containing the human-readable code</li>
+</ul>
+</li>
+<li><a href="../../code/dump_stuff/a_dump_h.txt">a_dump_h.txt</a><ul>
+<li>The hexadecimal representation of the executable </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The various "dumps" are raw readings from the files themselves, generated from a program that goes into the physical memory and just reads the info there without any formatting. The binary ones are the raw 1's and 0's, while the hexadecimal ones are represented using 16 characters (0-9 and A-F, 10 + 6 = 16) instead of 2 (1 and 0). This makes it a little more compact but still see the relations between code and machine instruction. The assembly one is generated from gcc using certain options. It is the assembly representation that is ran somewhere in the a.out executable. </p>
+<div class="admonition note">
+<p class="admonition-title">Cool Thing to Try</p>
+<p>Look around the dumps to see if you can see recognizable parts. You can try to find the specific part where the "Hello World" is stored.  </p>
+</div>
+<h2 id="anatomy-of-a-c-program">Anatomy of a C Program</h2>
+<p>Let's bring that hello_world.c over here to get a better look at it:</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Hello World Program</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">// Author: John Szwakob III</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cm">/*</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="cm">Description:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cm">A program that says Hello World.</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="cm">*/</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>^11b299</p>
+<p>While its a little alien, it's not too bad right? Let's break it down from the top down, line-by line:
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Hello World Program</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1">// Author: John Szwakob III</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cm">/*</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="cm">Description:</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="cm">A program that says Hello World.</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="cm">*/</span>
+</span></code></pre></div></p>
+<ul>
+<li>This part is a set of three code comments. Comments are text that the C compiler ignores, and they can be signified by either:<ul>
+<li><code>// Comment</code>  - for single line comments or,</li>
+<li><code>/* Comment */</code> - for multi-line comments</li>
+</ul>
+</li>
+<li>They have no purpose, do nothing, and are completely ignored by the compiler</li>
+<li>Usually, to make a program's purpose more obvious at first glance, programmers will employ comments to explain their code for their future self or for other developers seeking to understand or improve the code later on</li>
+<li>Here I am using it as a way to track who wrote it and the programs purpose</li>
+<li>We will go over our own standard soon, but this is a basic one</li>
+</ul>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span></code></pre></div>
+<ul>
+<li>This part is grabbing a library of functions for us to use in our program</li>
+<li>Specifically that <code>printf("...");</code> line is supplied by the <strong>st</strong>an<strong>d</strong>ard <strong>I</strong>nput/<strong>O</strong>utput (stdio.h) library </li>
+<li>Putting at the top let's use the function without having to write our own every time we make a program</li>
+<li>Plus for the simple stuff, usually you can't get better than the ones made by past programming wizards</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Read the Error</p>
+<p>Try compiling a program that prints without the <code>#include&lt;stdio.h&gt;</code> part. Try to compile it and see what error comes up.
+Try to read it, and based on what you did to cause it, understand what it is saying.</p>
+</div>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>This is the main function, it represents the start of our program.</li>
+<li>The compiler automatically compiles the final executable to run the main function and all the lines of code within it and no other function, unless they are called from the main one</li>
+<li>Everything between the curly braces (<code>{}</code>) gets ran as the main function</li>
+</ul>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+<ul>
+<li>A statement is most of what we will be writing in this course. All statements in C end in a semicolon ( ; ), get used to it and get used to looking for missing ones...</li>
+<li>This statement is a function defined inside the stdio.h library. It takes in data inside of the parentheses, here the words "Hello World!", and will print that data to the console output <ul>
+<li>Notice that there needs to be "quotes" around the words. This is how we represent textual information, called strings</li>
+</ul>
+</li>
+<li>stdio.h has more functions that we will go over in a future lesson, but if you are the eager type, <a href="https://www.w3schools.com/c/c_ref_stdio.php">this link</a> will take you to the W3 Schools Reference entry for the library. Within it contains all the functions that are available to us when we type <code>#include &lt;stdio.h&gt;</code> and how to use them.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Read the Error</p>
+<p>Something that will plague you well into your programming career will be missing semicolons. It is best to see what the error looks like before you run into it organically and want to go crazy. Take out the semicolon after the printf statement and see what the error looks like. Read it, look at the numbers and try to connect it to the line numbers in your code. </p>
+</div>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span></code></pre></div>
+<ul>
+<li>This statement represents the end of the program when contained in the main function. In other functions, it terminates the lifetime of the function and then yields the result to the place the function was called. </li>
+<li>At any point in the main function if the return statement is ran all code below it is ignored</li>
+<li>The <code>int</code> in <code>int main(){}</code> refers to the return type of the function, meaning that it is expected to output an integer by the end of it. <code>return 0;</code> is saying that the "result" of our program is 0. 0 is traditionally used as a code for "everything went as planned with no errors"<ul>
+<li>When the function your web browser uses to fetch a website, if that website doesn't exist the function ends with the classic "Error 404", ie a line in the code has something along the lines of <code>return 404;</code></li>
+</ul>
+</li>
+<li>If you remove it nothing will happen, but when you are dealing with advanced C it is important to pay attention to functions and knowing everything is fine can help a lot</li>
+</ul>
+<div class="admonition note mess around a little">
+<p class="admonition-title">Note</p>
+<p>Now that you understand the parts of a program enough not to break it immediately, play around with the program. Try different things, see what breaks if you remove it, see what breaks if you add to many of a thing, and read the errors. Try to understand what the compiler is saying to you when its screaming.
+Try some of these:
+- Change what the program says
+- Add more outputs
+- Look up online how to do multiple lines
+- Print a number</p>
+</div>
+<h2 id="data-types-and-variables">Data Types and Variables</h2>
+<p>Let's start adding to the basic program by going over how data is represented and manipulated in C. </p>
+<p>In C there are various data types that we will go over in more depth a little later. For now, know that the basic types available to us out of the box are as follows:
+- <code>int</code> - <strong>Integers</strong>: Whole numbers without any decimals
+    - Examples: 1, 2, 3, 0, 100, -100, 99999, etc</p>
+<ul>
+<li>
+<p><code>float</code> / <code>double</code> - <strong>Floating point numbers</strong>: Fractional numbers that represent some real number</p>
+<ul>
+<li>Examples: 0.0, 1.0, 3.1415, 1/2, 37.35962. 99.9999, etc</li>
+</ul>
+</li>
+<li>
+<p><code>char</code> - <strong>Characters</strong>: Single characters that can be letters, symbols, or single numbers</p>
+<ul>
+<li>Examples: 'A', 'B', 'C', '1', '$', '/', ' ', etc</li>
+</ul>
+</li>
+</ul>
+<p>You can use them like we did in hello_world.c, by just using them in a function like printf or return. However, that doesn't store that information in a spot you can use over and over again. For that we use variables. Variables store information under a name so that you can keep track of a value as you do manipulations on it. Because C is a [[0_basics_of_c#^8463de|statically typed language]], when you create a variable you need to create it with an intended type that it will always be. You declare variables in the following ways:</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">type</span><span class="w"> </span><span class="n">variableName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">;</span>
+</span></code></pre></div>
+<p>or</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">type</span><span class="w"> </span><span class="n">variableName</span><span class="p">;</span>
+</span></code></pre></div>
+<p>Where "type" would be replaced by one of the types from the above list, "variableName" is replaced by the actual name you want for the variable, and "Value" the initial value of type "type" that variableName will hold. </p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">whole_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">decimal_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1415</span><span class="p">;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">character</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;$&#39;</span><span class="p">;</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>This code creates an int, float, and char all with initial variables. The following code does the same thing only strung out across multiple lines.</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">whole_number</span><span class="p">;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">decimal_number</span><span class="p">;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">character</span><span class="p">;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="n">whole_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="n">decimal_number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1415</span><span class="p">;</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="n">character</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;$&#39;</span><span class="p">;</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>You can use the <code>=</code> sign to assign a value to the variable so long as it is of the right type. </p>
+<h2 id="operators">Operators</h2>
+<p>^7add8d</p>
+<p>Operators are the things we can do with data. Things like adding, subtracting, and the rest are managed by symbols we are pretty used to. There are a few different kinds of operators and there will be more info on them later but for now, the following are the arithmetic operators:</p>
+<ul>
+<li><code>+</code> - Addition ^ec7301</li>
+<li><code>-</code> - Subtraction</li>
+<li><code>*</code> - Multiplication</li>
+<li><code>/</code> - Division</li>
+<li><code>%</code> - Modulus/Remainder Division<ul>
+<li>This type of division returns the remainder of a division like so:<ul>
+<li>5 % 3 = 2 because 5 / 3 = 1 R 2</li>
+<li>4 % 3 = 1 because 4 / 3 = 1 R 1</li>
+<li>3 % 3 = 0 because 3 / 3 = 1 R 0</li>
+<li>...
+<div class="language-c highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">product</span><span class="p">;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">quotient</span><span class="p">;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="c1">// sum is now 3</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">    </span><span class="n">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="c1">// product is now 9</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="n">quotient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">17.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">20.0</span><span class="p">;</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="c1">// quotient is now 0.85</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="p">}</span>
+</span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>As you can see we can do operations on variables and on values alone, using the <code>=</code> to assign the result to a variable. However, you may notice a problem if you try and run this code. There's no output of the results! Sure, I am keeping track of the values using comments to show it in Obsidian, but if this was code to calculate something, how would be know the result?
+Your first instinct might be to do something like this:</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>If you try this you might find a warning that looks something like this:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>[goodguy@magus-turrim CS108]$ gcc sum.c
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>sum.c: In function &#39;main&#39;:
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>sum.c:16:16: warning: passing argument 1 of &#39;printf&#39; makes pointer from integer without a cast [-Wint-conversion]
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>   16 |         printf(sum);
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>      |                ^~~
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>      |                |
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>      |                int
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>In file included from sum.c:9:
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>/usr/include/stdio.h:363:43: note: expected &#39;const char * restrict&#39; but argument is of type &#39;int&#39;
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>  363 | extern int printf (const char *__restrict __format, ...);
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+</span></code></pre></div>
+<p>However, an output file is still generated. If you are brave enough to run it, you will find the following message:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>[goodguy@magus-turrim CS108]$ ./a.out
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Segmentation fault
+</span></code></pre></div>
+<p>Which boils down to ERROR. We will go into what that is later, but first let's see how we should do Input/Output using our data types.</p>
+<h2 id="basic-inputoutput">Basic Input/Output</h2>
+<h3 id="output">Output</h3>
+<p>We have been and will continue to use printf() for the majority of the course. It's simple, standard, and easy. In your hello.c program, we used it for the simple "Hello World!". For almost all situations where you would want to output information to the user or as a means of debugging, you will use printf(). Basic usage to print out strings to the console is the same as we used for Hello World!. However, if you have questioned why it is printf() and not just print(), you may wonder if there is more to it than just the basic printing. If you have tried to print out multiple lines you will have ran into a problem. Newlines are taken care of by using "\n" at the end of your printf() input string like so:</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;New line, new WORLD!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span></code></pre></div>
+<p>These are called <strong>escape sequences</strong> and they format the output of printf(). The "f" means print format, because we can use special characters and codes to change how the text is shown on the screen. Here is a list of some of the other ones, try them if you feel like it:</p>
+<p>https://en.wikipedia.org/wiki/Escape_sequences_in_C</p>
+<h3 id="basic-format-specifiers">Basic Format Specifiers</h3>
+<p>The problem with the [[0_basics_of_c#^7add8d|previous code]] was that the printf() function expects a certain format for its inputs. This format is a string that contains a set of characters and/or series of format specifiers. Strings are usually defined using characters  "between two double quotes". In order to print out the value of a variable, you need to use a <strong>format specifier</strong> in order to tell the printf() function what type of value it is printing. The following is a list of the format specifiers for each of the basic data types:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Format Specifier</th>
+<th>Example</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integer</td>
+<td><code>%d</code> / <code>%i</code></td>
+<td><code>printf("%d", 42)</code></td>
+<td><code>42</code></td>
+</tr>
+<tr>
+<td>Float</td>
+<td><code>%f</code></td>
+<td><code>printf("%f", 3.14)</code></td>
+<td><code>3.140000</code></td>
+</tr>
+<tr>
+<td>Scientific notation</td>
+<td><code>%e</code></td>
+<td><code>printf("%e", 12345.678)</code></td>
+<td><code>1.234568e+04</code></td>
+</tr>
+<tr>
+<td>Character</td>
+<td><code>%c</code></td>
+<td><code>printf("%c", 'A')</code></td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>String</td>
+<td><code>%s</code></td>
+<td><code>printf("%s", "hi")</code></td>
+<td><code>hi</code></td>
+</tr>
+<tr>
+<td>Unsigned integer</td>
+<td><code>%u</code></td>
+<td><code>printf("%u", 42)</code></td>
+<td><code>42</code></td>
+</tr>
+<tr>
+<td>Octal</td>
+<td><code>%o</code></td>
+<td><code>printf("%o", 8)</code></td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td>Hexadecimal (lowercase)</td>
+<td><code>%x</code></td>
+<td><code>printf("%x", 255)</code></td>
+<td><code>ff</code></td>
+</tr>
+<tr>
+<td>Hexadecimal (uppercase)</td>
+<td><code>%X</code></td>
+<td><code>printf("%X", 255)</code></td>
+<td><code>FF</code></td>
+</tr>
+<tr>
+<td>Pointer address</td>
+<td><code>%p</code></td>
+<td><code>printf("%p", &amp;x)</code></td>
+<td><code>0x7ffee...</code></td>
+</tr>
+<tr>
+<td>Percent literal</td>
+<td><code>%%</code></td>
+<td><code>printf("%%")</code></td>
+<td><code>%</code></td>
+</tr>
+</tbody>
+</table>
+<p>https://www.w3schools.com/c/c_data_types.php</p>
+<p>The format specifier works like a placeholder in the format string that says "there will be a value of type x here". It looks like this
+<div class="language-c highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">int_var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span><span class="p">;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">var_one</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">var_two</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">var_three</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;The stuff you want to always print should look like this.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;If I want to print an integer variable here: %d, I can</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">int_var</span><span class="p">);</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;use the format specifier for a decimal integer number</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;After the format string, you use a comma to add another input</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;So for three variables: 1:%d 2:%d 3:%d </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">var_one</span><span class="p">,</span><span class="w"> </span><span class="n">var_two</span><span class="p">,</span><span class="w"> </span><span class="n">var_three</span><span class="p">);</span>
+</span></code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">%d vs %i</p>
+<p>While the difference is superficial for the most part, there is a reason you will see me and many other programmers online use %d for most programs. While %i is easier to remember and makes more sense, think about how many different types of integers there are. Integers can be binary, decimal, octal, hexadecimal, or any other horrific number system. %d means a decimal integer number, not just any old integer. printf() doesn't really care about it, but some other stdio.h functions do and may cause future problems so be on the look out for that and be specific. </p>
+</div>
+<p>The following are examples of the output of various printf() function calls all with different format strings. Assume that everything is happening in a main function and we have included stdio.h to save on space</p>
+<ul>
+<li>
+<p>Inventory
+<div class="language-c highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">inventory_oranges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">973</span><span class="p">;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">inventory_apples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">583</span><span class="p">;</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">inventory_bananas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">159</span><span class="p">;</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Current Fruit Inventory:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Number of oranges: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">inventory_oranges</span><span class="p">);</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Number of apples: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">inventory_apples</span><span class="p">);</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Number of bananas: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">inventory_bananas</span><span class="p">);</span>
+</span></code></pre></div>
+Output:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>[goodguy@magus-turrim CS108]$ ./a.out
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Current Fruit Inventory:
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>Number of oranges: 973
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>Number of apples: 583
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>Number of bananas: 159
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>[goodguy@magus-turrim CS108]$ 
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Money and currency
+<div class="language-c highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">amount_money</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">99.99</span><span class="p">;</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">currency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;$&#39;</span><span class="p">;</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Your total is: %c %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">currency</span><span class="p">,</span><span class="w"> </span><span class="n">amount_money</span><span class="p">);</span>
+</span></code></pre></div></p>
+</li>
+</ul>
+<p>Output:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>[goodguy@magus-turrim CS108]$ ./a.out
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>Your total is: $ 99.990000
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>[goodguy@magus-turrim CS108]$ 
+</span></code></pre></div></p>
+<ul>
+<li>Average
+<div class="language-c highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">value_a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">35</span><span class="p">;</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">value_b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="p">;</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">value_c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value_a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value_b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value_c</span><span class="p">;</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="c1">// Since sum is an int, we need to tell the compiler to properly treat it like a float</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="kt">float</span><span class="w"> </span><span class="n">average</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">sum</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3.0</span><span class="p">;</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;The three values are:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d, %d, %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value_a</span><span class="p">,</span><span class="w"> </span><span class="n">value_b</span><span class="p">,</span><span class="w"> </span><span class="n">value_c</span><span class="p">);</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Their average is: %f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">average</span><span class="p">);</span>
+</span></code></pre></div>
+Output:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>[goodguy@magus-turrim CS108]$ ./a.out
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>The three values are:
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>35, 11, 17
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>Their average is: 21.000000
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>[goodguy@magus-turrim CS108]$ 
+</span></code></pre></div></li>
+</ul>
+<h2 id="inputs">Inputs</h2>
+<p>Inputs are done the same way as outputs, but in reverse! Instead of printf(), we use scanf() to scan a formatted string from the standard input, aka the console. So if you wanted to read inputs from the user and store them into a variable, you would need to specify the format of the input coming in from the user. Refer back to the format specifiers from the output section because they are the same for both input and output variable types. So if we wanted to store the input from the user in the form of an integer, it would look like this:</p>
+<p><div class="language-c highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">input_var</span><span class="p">;</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Please give me a number:&quot;</span><span class="p">);</span>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">input_var</span><span class="p">);</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Your number mulitplied by 2: %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">input_var</span><span class="o">*</span><span class="mi">2</span><span class="p">);</span>
+</span></code></pre></div>
+Output:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>[goodguy@magus-turrim CS108]$ ./a.out
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>Please give me a number:5
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>Your number mulitplied by 2: 10
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>[goodguy@magus-turrim CS108]$ 
+</span></code></pre></div></p>
+<p>I'll leave trying out the other data types for your own time, but they all follow the same form. As for that "&amp;", we will get to that in time, but for now think of it as a way to open the variable to have information read in. That's not exactly it, but until we get a little deeper it will work fine.</p>
+<div class="admonition note">
+<p class="admonition-title">Multiple Inputs, One scanf()</p>
+<p>There is a way to input multiple forms of data using one scanf() function call. Remember that printf() and scanf() work very similarly, so take a look at the printf() examples and try it out!</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascript/wcag_fixes.js"></script>
+      
+        <script src="../../javascript/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
