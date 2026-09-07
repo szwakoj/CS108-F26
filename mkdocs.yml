@@ -39,6 +39,7 @@ markdown_extensions:
   - md_in_html
   - pymdownx.blocks.caption
   - admonition
+  - pymdownx.details
 
 extra_javascript:
   - javascript/wcag_fixes.js
@@ -54,9 +55,10 @@ nav:
   - Schedule: schedule.md
   - Glossary: glossary.md
   - Lessons:
-    - Introduction: lessons/
+    - Introduction: lessons/0_basics_of_c.md
   - Labs:
     - C Compilation: labs/c_compilation.md
   - Homework:
     - How To Hand In: homework/how_to_hand_in.md
     - Install Software: homework/gcc_install.md
+    - Homework 0: homework/0_hello.md
