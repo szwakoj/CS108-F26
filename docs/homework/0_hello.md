@@ -1,6 +1,6 @@
 # Homework 0: Hello CS108!
 
-## Due Sunday 9/18/26
+## Due Sunday 9/20/26
 
 ## Description:
 
