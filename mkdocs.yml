@@ -64,3 +64,6 @@ nav:
     - How To Hand In: homework/how_to_hand_in.md
     - Install Software: homework/gcc_install.md
     - Homework 0: homework/0_hello.md
+    - Homework 1: homework/1_conditional.md
+  - Study Guides:
+    - Study Guide 1: study_guides/1_study_guide.md
