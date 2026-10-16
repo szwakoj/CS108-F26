@@ -58,6 +58,8 @@ nav:
     - Introduction: lessons/0_basics_of_c.md
     - Conditionals: lessons/1_conditionals.md
     - Loops: lessons/2_loops.md
+    - Functions: lessons/3_functions.md
+    - Arrays: lessons/4_arrays.md
   - Labs:
     - C Compilation: labs/c_compilation.md
   - Homework:
