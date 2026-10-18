@@ -1,11 +1,10 @@
 # Homework 2: Loops and Menu-Driven Shape Printing
 
-## Due 10/20/26
+## Due 10/30/26
 
 ## Description:
 
 This homework is centered on nested loops, conditional statements inside loops, and menu-driven programs. You will build a single program that prints several shapes to the console based on user input. Each shape is shown in an image. You are not given the steps to build each shape, so you will need to study the images carefully, find the pattern, and turn it into loops and conditions.
-
 
 ## How to Hand In
 
