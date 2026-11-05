@@ -60,6 +60,7 @@ nav:
     - Loops: lessons/2_loops.md
     - Functions: lessons/3_functions.md
     - Arrays: lessons/4_arrays.md
+    - Strings: lessons/5_strings.md
   - Labs:
     - C Compilation: labs/c_compilation.md
   - Homework:
