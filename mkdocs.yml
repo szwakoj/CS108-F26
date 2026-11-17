@@ -61,6 +61,7 @@ nav:
     - Functions: lessons/3_functions.md
     - Arrays: lessons/4_arrays.md
     - Strings: lessons/5_strings.md
+    - Pointers: lessons/6_pointers.md
   - Labs:
     - C Compilation: labs/c_compilation.md
   - Homework:
